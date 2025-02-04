@@ -17,7 +17,7 @@ nav{
 }
 
 .nav-banner{
-    margin-top: 25px;
+    margin-top: 15px;
     font-size: 30px;
     font-weight: 400;
 }
@@ -75,8 +75,12 @@ nav button:hover{
     color: azure;
     font-weight: 200;
     font-size: 20px;
+    border: none;
 }
 
+.hero-container button:hover{
+background-color: #FEA301;
+}
 .hero-content{
     display: flex;
     flex-direction: column;
@@ -183,6 +187,83 @@ background: rgb(254, 163, 1);
 padding: 14px;
 }
 
+
+/* our storis section */
+.our-stories{
+    background: url(assets/bg.png),linear-gradient(0.00deg, rgba(254, 163, 1, 0.3),rgba(255, 255, 255, 0.3) 100%);
+
+}
+
+
+
+/* footer section */
+footer{
+    background: rgb(1, 172, 253);
+    position: absolute;
+
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 150px;
+    width: 1497px;;
+    height: 519px;
+    top: 2572px;
+    line-height: 35px;
+}
+
+.f-description{
+    color: rgb(255, 255, 255);
+font-family: Quicksand;
+font-size: 20px;
+font-weight: 400;
+line-height: 25px;
+letter-spacing: 0%;
+text-align: left;
+}
+
+.f-heading{
+    color: rgb(255, 255, 255);
+font-family: Quicksand;
+font-size: 42.14px;
+font-weight: 700;
+line-height: 39.51px;
+letter-spacing: 0%;
+text-align: left;
+}
+
+.brand-heading{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    
+}
+
+.brand{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.lists{
+    display: flex;
+    flex-direction: column;
+}
+
+.lists a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.lists a:hover{
+    text-decoration: underline;
+}
+
+.f-img{
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
 /* responsive styles */
 
 @media  screen and (max-width:567px),(max-width:768px){
