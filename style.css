@@ -45,6 +45,7 @@ nav button{
     color: azure;
     font-weight: 200;
     font-size: 20px;
+    border: none;
 }
 
 nav button:hover{
@@ -91,6 +92,72 @@ nav button:hover{
     font-size: 20px;
     font-weight: 400;
 }
+
+/* main section */
+main{
+    background-image: url(assets/bg.png);
+    background-color: linear-gradient(0.00deg, rgba(254, 163, 1, 0.3),rgba(255, 255, 255, 0.3) 100%);
+    width: 1440px;
+height: 879px;
+}
+
+.sc-heading{
+    text-align: center;
+    margin-top: 100px;
+    color: rgb(0, 0, 0);
+font-family: Quicksand;
+font-size: 2.87rem;
+font-weight: 700;
+line-height: 57.5px;
+letter-spacing: 0%;
+margin-left: -76px;
+}
+
+.sc-container{
+   display: flex;
+   position: absolute;
+   gap: 25px;
+   margin: 100px 150px 0 150px;
+}
+
+.card-1{
+    padding: 40px;
+    height: 370px;
+    position: relative;
+    box-sizing: border-box;
+border: 0.94px solid rgb(222, 245, 255);
+border-radius: 18.86px;
+box-shadow: inset 0px 0px 28.3px 0.94px rgba(0, 0, 0, 0.05);
+background: linear-gradient(180.00deg, rgb(222, 245, 255),rgba(255, 255, 255, 0) 40%),rgb(255, 255, 255);
+text-align: center;
+}
+.card-2{
+    padding: 40px;
+    height: 370px;
+    position: relative;
+    box-sizing: border-box;
+    border: 0.94px solid rgb(255, 244, 220);
+    border-radius: 18.86px;
+    box-shadow: inset 0px 0px 28.3px 0.94px rgba(0, 0, 0, 0.05);
+    background: linear-gradient(180.00deg, rgb(255, 244, 220),rgba(255, 255, 255, 0) 40%),rgb(255, 255, 255);
+text-align: center;
+}
+.card-3{
+    padding: 40px;
+    height: 370px;
+    position: relative;
+    box-sizing: border-box;
+    border: 0.94px solid rgb(242, 232, 255);
+    border-radius: 18.86px;
+    box-shadow: inset 0px 0px 28.3px 0.94px rgba(0, 0, 0, 0.05);
+    background: linear-gradient(180.00deg, rgb(238, 225, 255),rgba(255, 255, 255, 0) 40%),rgb(255, 255, 255);
+text-align: center;
+}
+
+.card-content{
+    line-height: 30px;
+}
+
 /* responsive styles */
 
 @media  screen and (max-width:567px),(max-width:768px){
