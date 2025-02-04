@@ -64,7 +64,7 @@ nav button:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 210px;
+    gap: 20px;
 }
 
 .hero-container button{
@@ -86,11 +86,18 @@ nav button:hover{
 .hero-content h3{
     font-size: 56px;
     font-weight: 600;
+    width: 640px;
+height: 183px;
 }
 
 .hero-content p{
     font-size: 20px;
     font-weight: 400;
+}
+
+.hero-img{
+    width: 400.81px;
+height: 575px;
 }
 
 /* main section */
@@ -156,6 +163,24 @@ text-align: center;
 
 .card-content{
     line-height: 30px;
+}
+
+.icon-container{
+    display: flex;
+    justify-content: center;
+    margin-top: -250px;
+    gap: 15px;
+}
+
+.fa-arrow-left{
+    border-radius: 30px;
+background: rgb(254, 163, 1);
+padding: 14px;
+}
+.fa-arrow-right{
+    border-radius: 30px;
+background: rgb(254, 163, 1);
+padding: 14px;
 }
 
 /* responsive styles */
