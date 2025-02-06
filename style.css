@@ -3,6 +3,22 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* font family */
+.quicksand-font {
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+  }
+
+  .raleway-font{
+    font-family: "Raleway", serif;
+    color: rgb(102, 102,102);
+    font-size: 15.34px;
+    font-weight: 500;
+    line-height: 28.76px;
+    letter-spacing: 0%;
+  }
+
 /* shared styles */
 .btn-primary{
     background-color: #000;
@@ -91,7 +107,7 @@ background-color: #FEA301;
     font-size: 56px;
     font-weight: 600;
     width: 640px;
-height: 183px;
+height: 283px;
 }
 
 .hero-content p{
@@ -168,12 +184,13 @@ text-align: center;
 .card-content{
     line-height: 30px;
 }
-
+/* arrow section ( couldn't find the exact icons */
 .icon-container{
     display: flex;
     justify-content: center;
     margin-top: -250px;
     gap: 15px;
+    cursor: pointer;
 }
 
 .fa-arrow-left{
@@ -191,7 +208,7 @@ padding: 14px;
 /* our storis section */
 .our-stories{
     background: url(assets/bg.png),linear-gradient(0.00deg, rgba(254, 163, 1, 0.3),rgba(255, 255, 255, 0.3) 100%);
- 
+    margin-top: 350px;
 }
 
 .story-heading{
@@ -238,6 +255,7 @@ letter-spacing: 0%;
     gap: 15px;
     width: 480px;
     border-radius: 10px;
+    color: #000;
 }
 
 /* cards */
@@ -309,7 +327,7 @@ footer{
 }
 
 .f-description{
-    color: rgb(255, 255, 255);
+color: rgb(255, 255, 255);
 font-family: Quicksand;
 font-size: 20px;
 font-weight: 400;
