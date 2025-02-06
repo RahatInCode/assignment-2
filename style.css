@@ -124,14 +124,14 @@ height: 575px;
 main{
     background-image: url(assets/bg.png);
     background-color: linear-gradient(0.00deg, rgba(254, 163, 1, 0.3),rgba(255, 255, 255, 0.3) 100%);
-    width: 1440px;
+    max-width: 100%;
 height: 879px;
 }
 
 .sc-heading{
-    text-align: center;
-    margin-top: 100px;
-    color: rgb(0, 0, 0);
+text-align: center;
+margin-top: 100px;
+color: rgb(0, 0, 0);
 font-family: Quicksand;
 font-size: 2.87rem;
 font-weight: 700;
@@ -148,10 +148,10 @@ margin-left: -76px;
 }
 
 .card-1{
-    padding: 40px;
-    height: 370px;
-    position: relative;
-    box-sizing: border-box;
+padding: 40px;
+height: 370px;
+position: relative;
+box-sizing: border-box;
 border: 0.94px solid rgb(222, 245, 255);
 border-radius: 18.86px;
 box-shadow: inset 0px 0px 28.3px 0.94px rgba(0, 0, 0, 0.05);
@@ -178,13 +178,13 @@ text-align: center;
     border-radius: 18.86px;
     box-shadow: inset 0px 0px 28.3px 0.94px rgba(0, 0, 0, 0.05);
     background: linear-gradient(180.00deg, rgb(238, 225, 255),rgba(255, 255, 255, 0) 40%),rgb(255, 255, 255);
-text-align: center;
+    text-align: center;
 }
 
 .card-content{
     line-height: 30px;
 }
-/* arrow section ( couldn't find the exact icons */
+/* arrow section ( couldn't find the exact icons)*/
 .icon-container{
     display: flex;
     justify-content: center;
@@ -202,6 +202,35 @@ padding: 14px;
     border-radius: 30px;
 background: rgb(254, 163, 1);
 padding: 14px;
+}
+
+/*  marquee effect ( challenge part )*/
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: #004080;
+    padding: 15px 0;
+    white-space: nowrap;
+    position: relative;
+    margin-top: 100px;
+}
+
+.marquee {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 20s linear infinite;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
 }
 
 
@@ -310,78 +339,140 @@ letter-spacing: 0%;
 .stories-btn:hover{
     background-color: #FEA301;
 }
-/* footer section */
-footer{
+/* Footer Section */
+footer {
     background: rgb(1, 172, 253);
-    position: absolute;
+    position: relative;
+    padding: 30px 0;
 }
 
-.footer-container{
+/* Footer container */
+.footer-container {
     display: flex;
     justify-content: space-between;
-    padding: 150px;
-    width: 1497px;;
-    height: 519px;
-    top: 2572px;
-    line-height: 35px;
+    align-items: flex-start;
+    padding: 50px;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
-.f-description{
-color: rgb(255, 255, 255);
-font-family: Quicksand;
-font-size: 20px;
-font-weight: 400;
-line-height: 25px;
-letter-spacing: 0%;
-text-align: left;
-}
-
-.f-heading{
+/* Footer content styling */
+.f-description,
+.f-heading {
     color: rgb(255, 255, 255);
-font-family: Quicksand;
-font-size: 42.14px;
-font-weight: 700;
-line-height: 39.51px;
-letter-spacing: 0%;
-text-align: left;
+    text-align: left;
 }
 
-.brand-heading{
+.f-description {
+    font-family: Quicksand;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0%;
+    margin-bottom: 20px;
+}
+
+.f-heading {
+    font-family: Quicksand;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 39.51px;
+    letter-spacing: 0%;
+}
+
+/* Footer brand styling */
+.brand-heading {
     display: flex;
     align-items: center;
     gap: 18px;
-    
 }
 
-.brand{
+.brand {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.lists{
+
+/* List styles */
+.lists {
     display: flex;
     flex-direction: column;
 }
 
-.lists a{
+.lists a {
     text-decoration: none;
     color: aliceblue;
+    font-size: 16px;
 }
 
-.lists a:hover{
+.lists a:hover {
     text-decoration: underline;
 }
 
-.f-img{
+/* Footer image section */
+.f-img {
     display: flex;
     gap: 10px;
     margin-top: 15px;
 }
 /* responsive styles */
+@media screen and (max-width: 1024px) {
+    /* Hero Section */
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
 
-@media  screen and (max-width:567px),(max-width:768px){
+    .hero-content h3 {
+        font-size: 2.5rem;
+        width: 100%;
+        height: auto;
+    }
+
+    .hero-img {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+    }
+
+    /* Sc-Section */
+    .sc-container {
+        flex-direction: column;
+        align-items: center;
+        margin: 50px 30px;
+    }
+
+    .card-1, .card-2, .card-3 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .card-content {
+        line-height: 25px;
+    }
+
+    /* Marquee animation */
+    .marquee {
+        font-size: 1rem;
+        animation-duration: 8s;
+        max-width: 100%;
+    }
+
+    /* Footer Section */
+    .footer-container {
+        flex-direction: column;
+        padding: 50px 20px;
+        text-align: center;
+        gap: 30px;
+    }
+}
+
+/* Medium screen (smaller devices) */
+@media screen and (max-width: 768px) {
+
+    /* Navigation */
     nav {
-        margin: 20px 30px; 
+        margin: 20px 15px;
     }
 
     .nav-list, nav button {
@@ -392,23 +483,149 @@ text-align: left;
         display: block;
     }
 
-    .hero-container{
-        display: flex;
+    /* Hero Section */
+    .hero-container {
         flex-direction: column-reverse;
         gap: 20px;
+        text-align: center;
     }
 
-    .hero-container img {
-        width: 100%; 
-        max-width: 400px;
-    }
-    .cards-container {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    .card-large {
-        grid-column: span 2;
+    .hero-content h3 {
+        font-size: 2rem;
+        width: 100%;
+        height: auto;
     }
 
+    .hero-img {
+        width: 100%;
+        max-width: 350px;
+    }
 
+    /* Sc Section */
+    .sc-container {
+        flex-direction: column;
+        margin: 50px 20px;
+    }
 
+    .card-1, .card-2, .card-3 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .card-content {
+        line-height: 25px;
+    }
+
+    /* Cards layout */
+    .card-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin: 30px auto;
+    }
+
+    .large-card {
+        width: 100%;
+    }
+
+    .small-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card img {
+        height: 150px;
+    }
+
+    /* Footer Section */
+    .footer-container {
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center;
+    }
 }
+
+/* Small screens */
+@media screen and (max-width: 567px) {
+
+    /* Navigation */
+    nav {
+        margin: 15px 10px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-logo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Hero Section */
+    .hero-container {
+        flex-direction: column-reverse;
+        gap: 15px;
+    }
+
+    .hero-content h3 {
+        font-size: 1.8rem;
+        width: 100%;
+        height: auto;
+    }
+
+    .hero-img {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    /* Sc Section */
+    .sc-container {
+        flex-direction: column;
+        margin: 40px 15px;
+    }
+
+    .card-1, .card-2, .card-3 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .card-content {
+        line-height: 22px;
+    }
+
+    /* Marquee */
+    .marquee {
+        font-size: 0.9rem;
+        animation-duration: 6s;
+    }
+
+    /* Cards Layout */
+    .card-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin: 30px auto;
+    }
+
+    .large-card {
+        width: 100%;
+    }
+
+    .small-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card img {
+        height: 120px;
+    }
+
+    /* Footer Section */
+    .footer-container {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+
+/* the website looks normal on 90% zoom but goes scroll in 100%*/
