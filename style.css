@@ -324,6 +324,7 @@ letter-spacing: 0%;
     font-size: 12px;
     font-weight: bold;
     z-index: 2;
+   
 }
 
 .stories-btn{
@@ -454,7 +455,7 @@ footer {
     /* Marquee animation */
     .marquee {
         font-size: 1rem;
-        animation-duration: 8s;
+        animation-duration: 18s;
         max-width: 100%;
     }
 
@@ -467,61 +468,79 @@ footer {
     }
 }
 
-/* Medium screen (smaller devices) */
-@media screen and (max-width: 768px) {
+/* responsiveness */
 
-    /* Navigation */
+/* Large screens (1024px - 1200px) */
+@media screen and (max-width: 1200px) {
     nav {
-        margin: 20px 15px;
+        margin: 20px 50px;
     }
 
-    .nav-list, nav button {
-        display: none; 
-    }
-
-    .hamburger {
-        display: block;
-    }
-
-    /* Hero Section */
-    .hero-container {
-        flex-direction: column-reverse;
+    .nav-list {
+        font-size: 24px;
         gap: 20px;
-        text-align: center;
+    }
+
+    .sc-container {
+        margin: 100px 50px 0 50px;
+        gap: 15px;
+    }
+
+    .card-container {
+        margin: 100px 50px 0 50px;
+        gap: 30px;
+    }
+}
+
+/* Medium screens (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+    /* Navigation  bar */
+    nav {
+        margin: 20px 30px;
+    }
+
+    .nav-list {
+        font-size: 20px;
+        gap: 15px;
+    }
+
+    nav button {
+        width: 150px;
+        font-size: 16px;
+    }
+
+    /* Hero Section */
+    .hero-container {
+        padding: 0 30px;
+        gap: 40px;
     }
 
     .hero-content h3 {
-        font-size: 2rem;
+        font-size: 42px;
         width: 100%;
         height: auto;
     }
 
+    .hero-content p {
+        font-size: 18px;
+    }
+
     .hero-img {
-        width: 100%;
-        max-width: 350px;
+        width: 350px;
+        height: auto;
     }
 
-    /* Sc Section */
+    /* Standard Curriculum */
     .sc-container {
-        flex-direction: column;
-        margin: 50px 20px;
+        margin: 100px 30px 0 30px;
+        gap: 20px;
     }
 
-    .card-1, .card-2, .card-3 {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .card-content {
-        line-height: 25px;
-    }
-
-    /* Cards layout */
+    /* Stories Section */
     .card-container {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 15px;
-        margin: 30px auto;
+        margin: 100px 30px 0 30px;
+        gap: 30px;
+        flex-direction: column;
     }
 
     .large-card {
@@ -529,103 +548,133 @@ footer {
     }
 
     .small-cards {
-        grid-template-columns: 1fr;
-    }
-
-    .card img {
-        height: 150px;
-    }
-
-    /* Footer Section */
-    .footer-container {
-        flex-direction: column;
-        padding: 40px 20px;
-        text-align: center;
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Small screens */
-@media screen and (max-width: 567px) {
-
+/* Tablet screens (576px - 768px) */
+@media screen and (max-width: 768px) {
     /* Navigation */
-    nav {
-        margin: 15px 10px;
+    .nav-list, 
+    nav button {
+        display: none;
     }
 
     .hamburger {
         display: block;
     }
 
-    .nav-logo {
-        flex-direction: column;
-        align-items: center;
-    }
-
     /* Hero Section */
-    .hero-container {
-        flex-direction: column-reverse;
-        gap: 15px;
-    }
-
     .hero-content h3 {
-        font-size: 1.8rem;
-        width: 100%;
-        height: auto;
+        font-size: 36px;
+        text-align: center;
     }
 
-    .hero-img {
-        width: 100%;
-        max-width: 250px;
+    .hero-content p {
+        text-align: center;
     }
 
-    /* Sc Section */
+    .hero-content button {
+        margin: 0 auto;
+    }
+
+    /* Standard Curriculum */
     .sc-container {
         flex-direction: column;
-        margin: 40px 15px;
+        margin-top: 50px;
     }
 
-    .card-1, .card-2, .card-3 {
+    .card-1, 
+    .card-2, 
+    .card-3 {
         width: 100%;
-        margin-bottom: 20px;
+        max-width: 400px;
+        margin: 0 auto;
     }
 
-    .card-content {
-        line-height: 22px;
-    }
-
-    /* Marquee */
-    .marquee {
-        font-size: 0.9rem;
-        animation-duration: 6s;
-    }
-
-    /* Cards Layout */
-    .card-container {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 15px;
-        margin: 30px auto;
-    }
-
-    .large-card {
-        width: 100%;
-    }
-
-    .small-cards {
-        grid-template-columns: 1fr;
-    }
-
-    .card img {
-        height: 120px;
-    }
-
-    /* Footer Section */
+    /* Footer */
     .footer-container {
-        flex-direction: column;
-        padding: 20px;
+        padding: 30px;
+        gap: 40px;
+    }
+
+    .brand-heading {
+        justify-content: center;
+    }
+
+    .f-description {
         text-align: center;
     }
 }
 
+/* Mobile screens (< 576px) */
+@media screen and (max-width: 576px) {
+    /* Navigation */
+    .nav-logo {
+        gap: 10px;
+    }
 
-/* the website looks normal on 90% zoom but goes scroll in 100%*/
+    .nav-banner {
+        font-size: 24px;
+    }
+
+    /* Hero Section */
+    .hero-content h3 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+        br {
+            display: none;
+        }
+    }
+
+    .hero-img {
+        width: 280px;
+    }
+
+    /* Standard Curriculum */
+    .sc-heading {
+        font-size: 28px;
+        margin-left: 0;
+    }
+
+    /* Stories Section */
+    .small-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .story-heading {
+        font-size: 28px;
+    }
+
+    .date-badge {
+        top: 75%;
+    }
+
+    /* Footer */
+    .f-heading {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .f-description {
+        font-size: 16px;
+    }
+
+    .f-img {
+        justify-content: center;
+    }
+}
+
+/* Fix for the 100% zoom scroll issue */
+@media screen and (min-width: 1400px) {
+    body {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+}
+
+/* i messed up some sections but i tried my best sir/madam  */
